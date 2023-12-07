@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "my-module-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0-rc.7",
+    "nuxt": "latest"
+  },
+  "dependencies": {
+    "prettier": "^3.1.0",
+    "vuetify-nuxt-module": "^0.7.2"
+  }
+}
