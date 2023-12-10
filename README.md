@@ -7,52 +7,68 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# @skmd87/vuetify-confirm
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+Vuetigy Nuxt module to show confirmation dialog
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
-## Features
-
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `@skmd87/vuetify-confirm` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add  @skmd87/vuetify-confirm
 
 # Using yarn
-yarn add --dev my-module
+yarn add @skmd87/vuetify-confirm
 
 # Using npm
-npm install --save-dev my-module
+npm install @skmd87/vuetify-confirm
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `vuetify-confirm` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    'vuetify-confirm'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+
+That's it! You can now use vuetify-confirm in your Nuxt app ✨
+
+## Usage 
+
+In your layout, add vuetify-confirm component inside vuetify app
+
+```
+ <v-app>
+   <VuetifyConfirm />
+ </v-app>
+ ```
+
+ and you can use it like this:
+ ```
+const confirm = useConfirm()
+.
+.
+.
+confirm('Are you sure?')
+  .then((v) => /* do something if accepted */ )
+  .catch(e=> /* do something if rejected */)
+ ```
 
 ## Development
 
