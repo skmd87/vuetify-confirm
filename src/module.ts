@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports} from '@nuxt/kit'
 import defu from 'defu'
 import { klona } from 'klona'
 // Module options TypeScript interface definition
@@ -32,10 +32,35 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(options, nuxt) {
 
-    nuxt.options.runtimeConfig.public.vuetifyConfirm = defu(nuxt.options.runtimeConfig.public.vuetifyConfirm, klona(options))
-
-    const resolver = createResolver(import.meta.url)
-
+	  nuxt.options.runtimeConfig.public.vuetifyConfirm = defu(nuxt.options.runtimeConfig.public.vuetifyConfirm, klona(options))
+	  
+	  const resolver = createResolver(import.meta.url)
+	  
+	//   addTemplate({
+	// 	  filename: 'my-types.ts',
+	// 	  src: resolver.resolve('./my-types.ts'),
+	// 	  getContents: (src) => {
+	// 		  //return src
+	// 		  return `import type { ModuleOptions } from "./module";
+	// 		  import type { InjectionKey } from 'vue';
+			  
+			  
+	// 		  export type Rejection = 'OUTSIDE_CLICK' | 'ESC' | 'CANCEL_BTN';
+			  
+	// 		  export type Confirmation = 'OK_BTN'
+			  
+	// 		  export type VuetifyConfirmData = {
+	// 			  show: boolean;
+	// 			  locale: string;
+	// 			  options: ModuleOptions;
+	// 			  resolve: (arg: Confirmation) => void;
+	// 			  reject: (arg: Rejection) => void;
+	// 		  }
+			  
+			  
+	// 		  export const VuetifyConfirmDataKey: InjectionKey<VuetifyConfirmData> = Symbol('VuetifyConfirmData');`
+	// 	  }
+	//   })
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin({
       src: resolver.resolve('./runtime/plugin'),
@@ -53,4 +78,5 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
   }
+  
 })

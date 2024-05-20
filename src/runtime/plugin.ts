@@ -1,8 +1,9 @@
+/// <reference path="./VuetifyConfirm.d.ts" />
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { reactive } from '#imports'
 import type { ModuleOptions } from '../module'
-import { VuetifyConfirmDataKey, type VuetifyConfirmData, type Confirmation, type Rejection } from '../types'
-import defu from 'defu'
+import { VuetifyConfirmDataKey, type VuetifyConfirmData, type Confirmation, type Rejection } from './VuetifyConfirm.d'
+
 export default defineNuxtPlugin((nuxtApp) => {
   const { $i18n } = nuxtApp
 

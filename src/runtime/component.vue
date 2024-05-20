@@ -1,26 +1,26 @@
 <template>
     <div>
-        <v-dialog :model-value="data.show" max-width="400">
+        <v-dialog :model-value="data?.show" max-width="400">
             <v-card v-click-outside="outside">
                 <v-card-title>
                     <slot name="title">
-                        {{ data.options.title }}
+                        {{ data?.options.title }}
                     </slot>
                 </v-card-title>
                 <v-card-text>
                     <slot name="text">
-                        <div v-html="data.options.text" />
+                        <div v-html="data?.options.text" />
                     </slot>
                 </v-card-text>
 
                 <v-card-actions>
                     <slot name="actions" v-bind="{ ok, cancel }">
                         <v-spacer />
-                        <v-btn text @click="cancel">
-                            {{ data.options.cancelBtn }}
+                        <v-btn variant="text" @click="cancel">
+                            {{ data?.options.cancelBtn }}
                         </v-btn>
-                        <v-btn text @click="ok">
-                            {{ data.options.okBtn }}
+                        <v-btn variant="text" @click="ok">
+                            {{ data?.options.okBtn }}
                         </v-btn>
                     </slot>
                 </v-card-actions>
@@ -30,8 +30,8 @@
 </template>
 
 <script lang="ts" setup>
-import { inject, onMounted, onUnmounted, watch } from '#imports'
-import { VuetifyConfirmDataKey } from '../types';
+import { inject, onMounted, onUnmounted } from '#imports'
+import { VuetifyConfirmDataKey } from './VuetifyConfirm';
 
 
 defineOptions({
@@ -45,7 +45,6 @@ if (!data) {
 
 const ok = () => {
     data.resolve('OK_BTN')
-
 }
 
 const cancel = () => {

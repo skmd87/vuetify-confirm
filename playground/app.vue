@@ -5,17 +5,19 @@
         <h1 class="mb-8">
           Vuetify Confirm playground! 
         </h1>
-        <v-switch label="Locale" v-model="$i18n.locale" true-value="ar" false-value="en">
+        <v-switch v-model="$i18n.locale"  label="Locale" true-value="ar" false-value="en">
           </v-switch> {{ $i18n.locale }}
         <v-row>
           <v-col>
-            <v-btn color="primary"
+            <v-btn 
+				color="primary"
               @click="$confirm('Are you sure?').then((v) => result1 = v).catch((v) => result1 = v)">
               Test (useNuxtApp) {{ result1 }}
             </v-btn>
           </v-col>
           <v-col>
-            <v-btn color="primary"
+            <v-btn 
+			color="primary"
               @click="confirm({ text: 'This is an object param, confirm?' }).then((v) => result2 = v).catch((v) => result2 = v)">
               Test (useConfirm) {{ result2 }}
             </v-btn>
