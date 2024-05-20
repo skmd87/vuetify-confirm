@@ -2,7 +2,10 @@
   "name": "@skmd87/vuetify-confirm",
   "version": "1.0.3",
   "description": "vue3 vuetify confirm dialog",
-  "repository": "skmd87/vuetify-confirm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skmd87/vuetify-confirm.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {

@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import { inject, onMounted, onUnmounted } from '#imports'
-import { VuetifyConfirmDataKey } from './VuetifyConfirm';
+import { VuetifyConfirmDataKey } from './VuetifyConfirm.d';
 
 
 defineOptions({
