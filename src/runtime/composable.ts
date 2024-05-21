@@ -1,7 +1,6 @@
 import { useNuxtApp } from "#app";
-
-export const useConfirm = () => {
-    const { $confirm } = useNuxtApp()
+const { $confirm } = useNuxtApp()
+export const useConfirm = (): typeof $confirm => {   
 
     return $confirm;
 }

@@ -1,0 +1,6 @@
+{
+    "$vuetifyConfirm.title": "Confirm",
+    "$vuetifyConfirm.text": "Are you sure you want to continue?",
+    "$vuetifyConfirm.okBtn": "OK",
+    "$vuetifyConfirm.cancelBtn": "Cancel"
+}

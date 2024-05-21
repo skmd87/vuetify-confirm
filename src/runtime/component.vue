@@ -3,24 +3,26 @@
         <v-dialog :model-value="data?.show" max-width="400">
             <v-card v-click-outside="outside">
                 <v-card-title>
-                    <slot name="title">
-                        {{ data?.options.title }}
+                    <slot name="title">                        
+						{{ t('$vuetifyConfirm.title') }}
                     </slot>
                 </v-card-title>
                 <v-card-text>
                     <slot name="text">
+						<!--eslint-disable-next-line-->
                         <div v-html="data?.options.text" />
+						{{ data }}
                     </slot>
                 </v-card-text>
 
                 <v-card-actions>
-                    <slot name="actions" v-bind="{ ok, cancel }">
+                    <slot name="actions" v-bind="{ ok, cancel,loading:data?.loading }">
                         <v-spacer />
-                        <v-btn variant="text" @click="cancel">
-                            {{ data?.options.cancelBtn }}
+                        <v-btn variant="text" color="secondary" @click="cancel">
+							{{ t('$vuetifyConfirm.cancelBtn') }}
                         </v-btn>
-                        <v-btn variant="text" @click="ok">
-                            {{ data?.options.okBtn }}
+                        <v-btn variant="text" color="primary" :loading="data?.loading" @click="ok">
+							{{ t('$vuetifyConfirm.okBtn') }}
                         </v-btn>
                     </slot>
                 </v-card-actions>
@@ -32,7 +34,8 @@
 <script lang="ts" setup>
 import { inject, onMounted, onUnmounted } from '#imports'
 import { VuetifyConfirmDataKey } from './VuetifyConfirm.d';
-
+//@ts-ignore
+const { t } = useI18n()
 
 defineOptions({
     name: 'VuetifyConfirm',
