@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.10
+
+[compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.9...v1.0.10)
+
+### 🏡 Chore
+
+- **release:** V1.0.9 ([8bb8bbc](https://github.com/skmd87/vuetify-confirm/commit/8bb8bbc))
+
+### ❤️ Contributors
+
+- Samer Draidi <samer.kmd@gmail.com>
+
 ## v1.0.9
 
 [compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.8...v1.0.9)
