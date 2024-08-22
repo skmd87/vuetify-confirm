@@ -1,6 +1,6 @@
 /// <reference path="./VuetifyConfirm.d.ts" />
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import { reactive, ref, watch, type Ref } from '#imports'
+import { reactive, ref, watch } from '#imports'
 import type { ModuleOptions } from '../module'
 import { VuetifyConfirmDataKey, type VuetifyConfirmData, type Confirmation, type Rejection } from './VuetifyConfirm.d'
 
@@ -30,6 +30,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const hide = () => {
 	vuetifyConfirmData.show = false
+	isLoading.value = false
   }
   return {
     provide: {
@@ -44,7 +45,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         vuetifyConfirmData.options = options
         vuetifyConfirmData.show = true
-		vuetifyConfirmData.loading = false
+		isLoading.value = false
 
         return new Promise((resolve, reject) => {
           vuetifyConfirmData.resolve = (status:Confirmation) => {
