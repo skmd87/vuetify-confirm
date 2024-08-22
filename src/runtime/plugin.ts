@@ -44,7 +44,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         vuetifyConfirmData.options = options
         vuetifyConfirmData.show = true
-		// vuetifyConfirmData.loading = false
+		vuetifyConfirmData.loading = false
 
         return new Promise((resolve, reject) => {
           vuetifyConfirmData.resolve = (status:Confirmation) => {
