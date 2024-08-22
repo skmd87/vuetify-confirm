@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.0.7
+
+[compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.6...v1.0.7)
+
+### 🩹 Fixes
+
+- Remove debug data ([c5ac6a9](https://github.com/skmd87/vuetify-confirm/commit/c5ac6a9))
+
+### 🏡 Chore
+
+- **release:** V1.0.6 ([2d146e2](https://github.com/skmd87/vuetify-confirm/commit/2d146e2))
+
+### ❤️ Contributors
+
+- Samer Draidi <samer.kmd@gmail.com>
+
 ## v1.0.6
 
 [compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.5...v1.0.6)

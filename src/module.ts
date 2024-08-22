@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports, addTemplate } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addComponent, addImports } from '@nuxt/kit'
 import defu from 'defu'
 import { klona } from 'klona'
 // Module options TypeScript interface definition
@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
 		async: false,
 	},
 	setup(options, nuxt) {
-
+		//@ts-ignore
 		nuxt.options.runtimeConfig.public.vuetifyConfirm = defu(nuxt.options.runtimeConfig.public.vuetifyConfirm, klona(options))
 
 		const resolver = createResolver(import.meta.url)
@@ -55,7 +55,7 @@ export default defineNuxtModule<ModuleOptions>({
 				register({
 					// langDir path needs to be resolved
 					langDir: resolver.resolve('./runtime/localization'),
-					locales: [
+					locales: [						
 						{
 							code: 'en',
 							file: 'en.json',

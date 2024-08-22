@@ -1,6 +1,6 @@
 {
-    "title": "تأكيد",
-    "text": "هل أنت متأكد أنك تريد المتابعة؟",
-    "okBtn": "حسنا",
-    "cancelBtn": "إلغاء"
+    "$vuetifyConfirm.title": "تأكيد",
+    "$vuetifyConfirm.text": "هل أنت متأكد أنك تريد المتابعة؟",
+    "$vuetifyConfirm.okBtn": "حسنا",
+    "$vuetifyConfirm.cancelBtn": "إلغاء"
 }
