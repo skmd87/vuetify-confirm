@@ -3,17 +3,17 @@ import type { InjectionKey } from '#imports';
 
 declare module "#app" {
     interface NuxtApp {
-        $confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: boolean, hide: () => void }>;
+        $confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: Ref<boolean>, hide: () => void }>;
     }
 }
 declare module 'vue' {
     interface ComponentCustomProperties {
-		$confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: boolean, hide: () => void }>;
+		$confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: Ref<boolean>, hide: () => void }>;
     }
  }
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
-		$confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: boolean, hide: () => void }>;
+		$confirm: (params?: ModuleOptions | string) => Promise<{ status: Confirmation, loading: Ref<boolean>, hide: () => void }>;
     }
 }
 
