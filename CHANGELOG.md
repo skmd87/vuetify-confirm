@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.0.8
+
+[compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.7...v1.0.8)
+
+### 🩹 Fixes
+
+- Loading payload type ([c1c094d](https://github.com/skmd87/vuetify-confirm/commit/c1c094d))
+
+### 🏡 Chore
+
+- **release:** V1.0.7 ([88d3cba](https://github.com/skmd87/vuetify-confirm/commit/88d3cba))
+
+### ❤️ Contributors
+
+- Samer Draidi <samer.kmd@gmail.com>
+
 ## v1.0.7
 
 [compare changes](https://github.com/skmd87/vuetify-confirm/compare/v1.0.6...v1.0.7)
