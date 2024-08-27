@@ -10,8 +10,8 @@ export interface ModuleOptions {
 	width?: number;
 	title?: string;
 	text?: string;
-	cancelBtn?: string;
-	okBtn?: string;
+	cancelBtn?: string | false;
+	okBtn?: string | false;
 	async?: boolean;
 }
 

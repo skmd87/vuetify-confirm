@@ -4,7 +4,7 @@
             <v-card v-click-outside="outside">
                 <v-card-title>
                     <slot name="title">                        
-						{{ $t('$vuetifyConfirm.title') }}
+						{{ data?.options.title || $t('$vuetifyConfirm.title') }}
                     </slot>
                 </v-card-title>
                 <v-card-text>
@@ -17,11 +17,11 @@
                 <v-card-actions>
                     <slot name="actions" v-bind="{ ok, cancel,loading:data?.loading }">
                         <v-spacer />
-                        <v-btn variant="text" color="secondary" @click="cancel">
-							{{ $t('$vuetifyConfirm.cancelBtn') }}
+                        <v-btn v-if="data?.options.cancelBtn !== false" variant="text" color="secondary" @click="cancel">
+							{{ data?.options.cancelBtn || $t('$vuetifyConfirm.cancelBtn') }}
                         </v-btn>
-                        <v-btn variant="text" color="primary" :loading="data?.loading" @click="ok">
-							{{ $t('$vuetifyConfirm.okBtn') }}
+                        <v-btn v-if="data?.options.okBtn !== false" variant="text" color="primary" :loading="data?.loading" @click="ok">
+							{{ data?.options.okBtn || $t('$vuetifyConfirm.okBtn') }}
                         </v-btn>
                     </slot>
                 </v-card-actions>
